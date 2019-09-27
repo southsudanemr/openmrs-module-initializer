@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+	
+	<!-- Base Module Properties -->
+	<id>${project.parent.artifactId}</id>
+	<name>${project.parent.name}</name>
+	<version>${project.parent.version}</version>
+	<package>${project.parent.groupId}.${project.parent.artifactId}</package>
+	<author>${project.parent.organization.name}</author>
+	<description>${project.parent.description}</description>
+
+	<activator>org.openmrs.module.initializer.InitializerActivator</activator>
+	
+	<require_version>${openMRSVersion}</require_version>
+	
+	<!-- Extensions -->
+	<extension>
+		<point>org.openmrs.admin.list</point>
+		<class>org.openmrs.module.initializer.extension.html.AdminList</class>
+	</extension>
+
+	<aware_of_modules>
+		<aware_of_module>org.openmrs.module.legacyui</aware_of_module>
+		<aware_of_module version="${idgenVersion}">
+			org.openmrs.module.idgen
+		</aware_of_module>
+		<aware_of_module version="${metadatasharingVersion}">
+			org.openmrs.module.metadatasharing
+		</aware_of_module>
+		<aware_of_module version="${metadatamappingVersion}">
+			org.openmrs.module.metadatamapping
+		</aware_of_module>
+	</aware_of_modules>
+	
+	<!-- Internationalization -->
+	<!-- All message codes should start with @MODULE_ID@.* -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+	
+</module>

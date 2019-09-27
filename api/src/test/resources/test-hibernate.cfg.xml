@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- AH -->
+        <mapping resource="AddressHierarchyLevel.hbm.xml"/>
+        <mapping resource="AddressHierarchyEntry.hbm.xml"/>
+        <!-- MDS -->
+        <mapping resource="ImportedItem.hbm.xml"/>
+        <mapping resource="ImportedPackage.hbm.xml"/>
+        <!-- Idgen -->
+        <mapping resource="IdentifierSource.hbm.xml"/>
+        <!-- MetadataMapping -->
+        <mapping resource="MetadataSource.hbm.xml"/>
+        <mapping resource="MetadataTermMapping.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
